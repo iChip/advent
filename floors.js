@@ -18,6 +18,7 @@ function readInputString(data) {
 		var current = data.charAt(i);
 		if (current == '(') floors++;
 		if (current == ')') floors--;
+		if (floors == -1) console.log('Hit Basement on character: ', i + 1)
 	}
 	console.log(floors);
 }
