@@ -22,13 +22,13 @@ function naughtyOrNice(line) {
 
 	var lineChars = line.split('');
 
-	var hasThreeVowels = vowelCounter(lineChars) > 2;
+	var hasThreeVowels = countVowels(lineChars) > 2;
 	var hasDoubleChar = hasCharPair(lineChars);
 
 	return hasThreeVowels && hasDoubleChar;
 }
 
-function vowelCounter(lineChars) {
+function countVowels(lineChars) {
 	return lineChars.reduce(function(previous, current) {
 		if (vowels.indexOf(current) > -1) return previous++;
 	}, 0);
